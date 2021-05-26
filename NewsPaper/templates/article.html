@@ -1,0 +1,9 @@
+{% extends 'flatpages/default.html' %}
+{% load custom_filters %}
+
+{% block content %}
+<h1>{{ article.header | censor:article.header }} ({{ article.create_date | date:'d M Y H:i' }})</h1>
+<br>
+<span>{{ article.text | censor:article.text }}</span>
+<br>
+{% endblock content %}
